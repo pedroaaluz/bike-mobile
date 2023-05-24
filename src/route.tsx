@@ -16,16 +16,16 @@ const {Navigator, Screen} =
 
 export const Route = () => {
   return (
-    <Navigator initialRouteName="Map">
+    <Navigator initialRouteName="Map" barStyle={{backgroundColor: '#fff'}}>
       <Screen
         name="Map"
         component={Map}
         options={{
           tabBarLabel: 'Mapa',
-          tabBarIcon: ({color, focused}) => (
+          tabBarIcon: ({focused}: {color: string; focused: boolean}) => (
             <MaterialCommunityIcons
               name={focused ? 'home' : 'map-outline'}
-              color={color}
+              color={focused ? '#F5F5F5' : '#A5A5A5'}
               size={26}
             />
           ),
@@ -36,10 +36,10 @@ export const Route = () => {
         component={Settings}
         options={{
           tabBarLabel: 'Configurações',
-          tabBarIcon: ({color, focused}) => (
+          tabBarIcon: ({focused}: {color: string; focused: boolean}) => (
             <MaterialCommunityIcons
               name={focused ? 'cog' : 'cog-outline'}
-              color={color}
+              color={focused ? '#F5F5F5' : '#A5A5A5'}
               size={26}
             />
           ),
