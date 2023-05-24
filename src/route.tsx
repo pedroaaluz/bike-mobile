@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Map from './screen/Map';
@@ -11,7 +11,7 @@ export type BottomTabParamList = {
   Settings: undefined;
 };
 
-const { Navigator, Screen } =
+const {Navigator, Screen} =
   createMaterialBottomTabNavigator<BottomTabParamList>();
 
 export const Route = () => {
@@ -22,7 +22,7 @@ export const Route = () => {
         component={Map}
         options={{
           tabBarLabel: 'Mapa',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({color, focused}) => (
             <MaterialCommunityIcons
               name={focused ? 'home' : 'map-outline'}
               color={color}
@@ -36,7 +36,7 @@ export const Route = () => {
         component={Settings}
         options={{
           tabBarLabel: 'Configurações',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({color, focused}) => (
             <MaterialCommunityIcons
               name={focused ? 'cog' : 'cog-outline'}
               color={color}
