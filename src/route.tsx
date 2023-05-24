@@ -10,7 +10,7 @@ export const Route = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        {/*    <Tab.Screen name="Nap" component={Map} /> */}
+        <Tab.Screen name="Map" component={Map} />
       </Tab.Navigator>
     </NavigationContainer>
   );
